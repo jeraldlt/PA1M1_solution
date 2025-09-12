@@ -247,6 +247,7 @@ function execute_test() {
 instructions=("add" "andiu" "and" "andi" "beq" "bne"
 "j" "lui" "or" "ori" "slt" "sub" "syscall")
 
+echo
 
 for inst in "${instructions[@]}"
 do
