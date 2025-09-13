@@ -30,6 +30,11 @@ jobs:
     - name: Move executable
       run: mv build/out/$(ls build/out | head -n 1) ./submission
 
+    - name: Get test files
+    - run: |
+        wget https://raw.githubusercontent.com/UWM-COMPSCI458/PA1M1_grader/refs/heads/main/tester.sh
+        wget https://github.com/UWM-COMPSCI458/PA1M1_grader/raw/refs/heads/main/reference
+
     - name: Run tests
       uses: UWM-COMPSCI458/autograding-command-grader@main
       id: hello-test
@@ -37,7 +42,7 @@ jobs:
       with:
         test-name: Hello Test
         command: "bash"
-        arguments: '[".tester/tester.sh", ".tester/reference", "./submission"]'
+        arguments: '["./tester.sh", "./reference", "./submission"]'
         timeout: 10
         max-score: 75
 
