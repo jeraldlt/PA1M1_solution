@@ -230,16 +230,16 @@ function execute_test() {
   result=$($SUBMISSION "$line")
   correct_result=$($TESTER "$line")
 
-  echo "Evaluating line \`$line\`"
-  echo ".. Evaluated output: $result"
-  echo ".. Expected output:  $correct_result"
+  echo "Evaluating line: \`$line\`"
+  echo "> Evaluated output: $result"
+  echo "> Expected output:  $correct_result"
   if [ $result = $correct_result ]; then
     ((INST_CORRECT++))
     ((TOTAL_CORRECT++))
-    echo ".. Output is correct (1/1)"
+    echo "> Output is correct (1/1)"
     echo
   else
-    echo ".. Output is incorrect (0/1)"
+    echo "> Output is incorrect (0/1)"
     echo
   fi
 }
@@ -253,9 +253,7 @@ for inst in "${instructions[@]}"
 do
   INST_CORRECT=0
   
-  echo "**********"
-  echo "* Testing instruction $inst"
-  echo "**********"
+  echo "## Testing instruction $inst"
   echo
   
   for ((i=0; i<5; i++))
@@ -266,6 +264,7 @@ do
   echo
   echo "Instruction score: $INST_CORRECT / 5"
   echo
+  echo "**********"
 done
 
 echo
