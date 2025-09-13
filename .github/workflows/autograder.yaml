@@ -30,15 +30,17 @@ jobs:
     - name: Move executable
       run: mv build/out/$(ls build/out | head -n 1) ./submission
 
-
-
     - name: Run tests
       uses: UWM-COMPSCI458/autograding-command-grader@main
       id: hello-test
+      continue-on-error: true
       with:
         test-name: Hello Test
         command: "bash"
         arguments: '[".tester/tester.sh", ".tester/reference", "./submission"]'
         timeout: 10
         max-score: 75
+
+    - name: Add report
+      run: echo "${{ steps.hello-test.outputs.report }}" >> $GITHUB_STEP_SUMMARY
 
