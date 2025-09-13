@@ -236,10 +236,10 @@ function execute_test() {
   if [ $result = $correct_result ]; then
     ((INST_CORRECT++))
     ((TOTAL_CORRECT++))
-    echo "> Output is correct (1/1)"
+    echo "> Output is correct (1/1) ✅"
     echo
   else
-    echo "> Output is incorrect (0/1)"
+    echo "> Output is incorrect (0/1) ❌"
     echo
   fi
 }
