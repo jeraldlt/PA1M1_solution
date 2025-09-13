@@ -230,7 +230,7 @@ function execute_test() {
   result=$($SUBMISSION "$line")
   correct_result=$($TESTER "$line")
 
-  echo Evaluating line \'\'\'$line\'\'\'
+  echo "Evaluating line \`$line\`"
   echo ".. Evaluated output: $result"
   echo ".. Expected output:  $correct_result"
   if [ $result = $correct_result ]; then
