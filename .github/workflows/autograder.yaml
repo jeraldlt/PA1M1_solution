@@ -31,7 +31,7 @@ jobs:
       run: mv build/out/$(ls build/out | head -n 1) ./submission
 
     - name: Get test files
-    - run: |
+      run: |
         wget https://raw.githubusercontent.com/UWM-COMPSCI458/PA1M1_grader/refs/heads/main/tester.sh
         wget https://github.com/UWM-COMPSCI458/PA1M1_grader/raw/refs/heads/main/reference
 
