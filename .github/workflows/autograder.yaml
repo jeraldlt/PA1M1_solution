@@ -34,6 +34,7 @@ jobs:
       run: |
         wget https://raw.githubusercontent.com/UWM-COMPSCI458/PA1M1_grader/refs/heads/main/tester.sh
         wget https://github.com/UWM-COMPSCI458/PA1M1_grader/raw/refs/heads/main/reference
+        chmod +x reference
 
     - name: Run tests
       uses: UWM-COMPSCI458/autograding-command-grader@main
