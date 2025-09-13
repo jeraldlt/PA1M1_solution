@@ -262,12 +262,12 @@ do
   done
 
   echo
-  echo "Instruction score: $INST_CORRECT / 5"
+  echo "**Instruction score: $INST_CORRECT / 5**"
   echo
   echo "**********"
 done
 
 echo
-echo "Total score: $TOTAL_CORRECT / 75"
+echo "# Total score: $TOTAL_CORRECT / 75"
 
 exit $TOTAL_CORRECT
