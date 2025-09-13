@@ -38,15 +38,11 @@ jobs:
 
     - name: Run tests
       uses: UWM-COMPSCI458/autograding-command-grader@main
-      id: hello-test
+      id: pa1m1-tests
       continue-on-error: true
       with:
-        test-name: Hello Test
+        test-name: PA1M1 Tests
         command: "bash"
         arguments: '["./tester.sh", "./reference", "./submission"]'
         timeout: 10
         max-score: 75
-
-    # - name: Add report
-    #   run: echo "${{ steps.hello-test.outputs.report }}" >> $GITHUB_STEP_SUMMARY
-
