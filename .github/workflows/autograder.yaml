@@ -41,6 +41,6 @@ jobs:
         timeout: 10
         max-score: 75
 
-    - name: Add report
-      run: echo "${{ steps.hello-test.outputs.report }}" >> $GITHUB_STEP_SUMMARY
+    # - name: Add report
+    #   run: echo "${{ steps.hello-test.outputs.report }}" >> $GITHUB_STEP_SUMMARY
 
